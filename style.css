@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.body {
+  background: url("/bg.jpg");
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#board {
+  background: linear-gradient(rgb(188, 196, 188), rgb(59, 78, 85));
+  width: 90vmin;
+  height: 92vmin;
+  border: 2px solid black;
+  display: grid;
+  grid-template-rows: repeat(
+    18,
+    1fr
+  ); /* fr ==  per unit widht repated for 18 times*/
+  grid-template-columns: repeat(18, 1fr);
+  /* last 2 code lines use karkei we have build the snake background with 18 x 18 px size ka grid */
+}
+
+.head {
+  background: linear-gradient(red, yellow);
+  border-radius: 50px;
+}
+.snake {
+  background-color: purple;
+  border: 0.25vmin solid rgb(81, 1, 107);
+  border-radius: 50px;
+}
+.food {
+  background-color: rgb(102, 236, 6);
+  border: 0.25vmin solid grey;
+  border-radius: 120px;
+}
+#scorebox {
+  position: absolute;
+  top: 9px;
+  right: 200px;
+  font-size: 40px;
+  font-weight: bold;
+}
+#highscorebox {
+  position: absolute;
+  top: 49px;
+  right: 200px;
+  font-size: 40px;
+  font-weight: bold;
+}
